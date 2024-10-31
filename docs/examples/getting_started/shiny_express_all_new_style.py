@@ -3,6 +3,8 @@ from random import randrange
 import pandas as pd
 from pytabulator import TableOptions, Tabulator, TabulatorContext, render_tabulator
 from pytabulator.utils import create_columns
+from pytabulator.formatters import ProgressFormatter, TickCrossFormatter
+from pytabulator.editors import ListEditor, InputEditor, ProgressEditor
 from shiny import reactive, render
 from shiny.express import input, ui
 
@@ -25,8 +27,8 @@ table_options = TableOptions(
                 "formatterParams": {"stars": 3},
                 "hozAlign": "center",
             },
-            "Survived": {"formatter": "tickCross"},
-            "Fare": {"formatter": "progress", "hozAlign": "left"},
+            # "Survived": {"formatter": "tickCross"},
+            # "Fare": {"formatter": "progress", "hozAlign": "left"},
         },
     ),
     height=413,
@@ -77,9 +79,15 @@ def selected_rows():
 
 @render_tabulator
 def tabulator():
-    return Tabulator(df, table_options).set_options(
-        editTriggerEvent="dblclick"
-    )  # .options(selectableRows=True)
+    return (
+        Tabulator(df, table_options)
+        .set_options(editTriggerEvent="dblclick")
+        .set_column_formatter("Fare", ProgressFormatter(), hoz_align="left")
+        .set_column_formatter("Survived", TickCrossFormatter(), hoz_align="center")
+        .set_column_editor("Sex", ListEditor())
+        .set_column_editor("Name", InputEditor())
+        .set_column_editor("Fare", ProgressEditor(), hoz_align="left")
+    )
 
 
 @reactive.Effect
