@@ -26,7 +26,7 @@
 * Download data
 * Freeze data
 
-To learn more about pytabulator, see the documentation at https://eodagmbh.github.io/py-tabulator/.
+To learn more about pytabulator, see the documentation at https://eoda-dev.github.io/py-tabulator/.
 
 Bindings for R are available at https://github.com/eoda-dev/rtabulator.
 
