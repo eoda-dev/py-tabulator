@@ -1,10 +1,10 @@
 # py-tabulator: Tabulator for Python
 
-[![Release](https://img.shields.io/github/v/release/eodaGmbH/py-tabulator)](https://img.shields.io/github/v/release/eodaGmbH/py-tabulator)
+[![Release](https://img.shields.io/github/v/release/eoda-dev/py-tabulator)](https://img.shields.io/github/v/release/eoda-dev/py-tabulator)
 [![pypi](https://img.shields.io/pypi/v/pytabulator.svg)](https://pypi.python.org/pypi/pytabulator)
-[![Build status](https://img.shields.io/github/actions/workflow/status/eodaGmbH/py-tabulator/pytest.yml?branch=main)](https://img.shields.io/github/actions/workflow/status/eodaGmbH/py-tabulator/pytest.yml?branch=main)
-[![License](https://img.shields.io/github/license/eodaGmbH/py-tabulator)](https://img.shields.io/github/license/eodaGmbH/py-tabulator)
-[![License](https://img.shields.io/github/license/eodaGmbH/py-maplibregl)](https://img.shields.io/github/license/eodaGmbH/py-maplibregl)
+[![Build status](https://img.shields.io/github/actions/workflow/status/eoda-dev/py-tabulator/pytest.yml?branch=main)](https://img.shields.io/github/actions/workflow/status/eoda-dev/py-tabulator/pytest.yml?branch=main)
+[![License](https://img.shields.io/github/license/eoda-dev/py-tabulator)](https://img.shields.io/github/license/eoda-dev/py-tabulator)
+[![License](https://img.shields.io/github/license/eoda-dev/py-maplibregl)](https://img.shields.io/github/license/eoda-dev/py-maplibregl)
 [![Tabulator](https://img.shields.io/badge/Tabulator-v6.2.1-blue.svg)](https://github.com/olifolkerd/tabulator/releases/tag/6.2.1)
 
 [Shiny for Python](https://shiny.posit.co/py/) bindings for [Tabulator JS](https://tabulator.info/)
@@ -28,7 +28,7 @@
 
 To learn more about pytabulator, see the documentation at https://eodagmbh.github.io/py-tabulator/.
 
-Bindings for R are available at https://github.com/eodaGmbH/rtabulator.
+Bindings for R are available at https://github.com/eoda-dev/rtabulator.
 
 ## Installation
 
@@ -41,7 +41,7 @@ pip install pytabulator
 You can install the development version of pytabulator like so:
 
 ```bash
-pip install git+https://github.com/eodaGmbH/py-tabulator
+pip install git+https://github.com/eoda-dev/py-tabulator
 ```
 
 ## Basic usage
