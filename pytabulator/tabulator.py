@@ -65,6 +65,17 @@ class Tabulator(object):
 
         return self
 
+    def update_column2(self, col_name, formatter: dict | Formatter = None, editor: dict | Editor = None, **kwargs: Any) -> Self:
+        if formatter is not None:
+            self.set_column_formatter(col_name, formatter)
+
+        if editor is not None:
+            self.set_column_editor(col_name, editor)
+
+        self._update_column(col_name, **kwargs)
+
+        return self
+
     def set_column_formatter(
         self,
         col_name: str | list,
